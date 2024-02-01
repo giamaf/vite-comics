@@ -74,7 +74,7 @@ export default {
 <style>
 header {
     justify-content: space-between;
-    min-height: 70px;
+    min-height: 80px;
     font-size: 0.7rem;
     font-family: 'Open Sans Condensed';
     font-weight: bold;

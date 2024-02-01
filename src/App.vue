@@ -1,12 +1,14 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
+import AppMainContents from './components/AppMainContents.vue';
 export default {
   // Logica Javascript
   name: 'DC Comics',
 
 
   components: {
-    AppHeader
+    AppHeader,
+    AppMainContents
   }
 
 };
@@ -18,6 +20,9 @@ export default {
   <div class="container">
     <AppHeader />
   </div>
+  <main>
+    <AppMainContents />
+  </main>
 </template>
  
 
