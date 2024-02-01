@@ -82,7 +82,7 @@ export default {
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 280px);
+    height: calc(100vh - 370px);
     position: relative;
 }
 

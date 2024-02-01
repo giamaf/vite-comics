@@ -1,8 +1,6 @@
 <script>
 export default {
     name: 'AppAsideContents',
-
-
     data: () => ({
         asideItems: [
             {
@@ -54,7 +52,7 @@ export default {
 <style>
 aside {
     background-color: rgb(12, 105, 247);
-    min-height: 120px;
+    /* min-height: 120px; */
     font-size: 0.7rem;
     position: relative;
     z-index: 1;
