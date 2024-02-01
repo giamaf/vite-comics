@@ -61,7 +61,7 @@ export default {
 </script>
  
 <template>
-    <header class="flex">
+    <header class="flex container">
         <a href="#"><img src="../assets/img/dc-logo.png" alt=""></a>
         <ul class="flex">
             <li v-for="(item, i) in   navItems  " :key="i">
@@ -76,17 +76,15 @@ header {
     justify-content: space-between;
     min-height: 80px;
     font-size: 0.7rem;
-    font-family: 'Open Sans Condensed';
     font-weight: bold;
 }
 
-img {
+header img {
     width: 50px;
     height: 50px;
 }
 
-ul {
-    text-transform: uppercase;
-    gap: 20px;
+header a {
+    color: black;
 }
 </style>

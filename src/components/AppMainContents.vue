@@ -6,15 +6,17 @@ export default {
 </script>
  
 <template>
-    <section>
-        <div class="container">
-            <h4> > Content goes here < </h4>
-        </div>
-    </section>
+    <main>
+        <section>
+            <div class="container">
+                <h4> > Content goes here < </h4>
+            </div>
+        </section>
+    </main>
 </template>
  
 <style>
-section {
+main {
     background-color: rgba(0, 0, 0, 0.9);
     min-height: 80px;
     font-family: 'Open Sans';

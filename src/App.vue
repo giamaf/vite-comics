@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue';
 import AppMainContents from './components/AppMainContents.vue';
+import AppAsideContents from './components/AppAsideContents.vue';
 export default {
   // Logica Javascript
   name: 'DC Comics',
@@ -8,7 +9,8 @@ export default {
 
   components: {
     AppHeader,
-    AppMainContents
+    AppMainContents,
+    AppAsideContents
   }
 
 };
@@ -17,12 +19,9 @@ export default {
  
 <!-- Template -->
 <template>
-  <div class="container">
-    <AppHeader />
-  </div>
-  <main>
-    <AppMainContents />
-  </main>
+  <AppHeader />
+  <AppMainContents />
+  <AppAsideContents />
 </template>
  
 
@@ -36,7 +35,7 @@ export default {
 
 /* Generics */
 body {
-  font-family: 'Open Sans Variable', 'Open Sans Condensed';
+  font-family: 'Open Sans', sans-serif;
 }
 
 img {
@@ -46,12 +45,14 @@ img {
 
 ul {
   list-style-type: none;
+  text-transform: uppercase;
+  gap: 20px;
 }
 
 a {
   text-decoration: none;
-  color: black;
 }
+
 
 /* Utils */
 .container {
