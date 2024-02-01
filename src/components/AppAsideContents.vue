@@ -44,7 +44,7 @@ export default {
             <ul class="flex">
                 <li v-for="(item, i) in asideItems" :key="i" class="flex">
                     <a href="#"><img :src="`${createPath()}/${item.image}`" :alt="item.label"></a>
-                    <label for="">{{ item.label }}</label>
+                    <label>{{ item.label }}</label>
                 </li>
             </ul>
         </div>
@@ -54,8 +54,10 @@ export default {
 <style>
 aside {
     background-color: rgb(12, 105, 247);
-    min-height: 100px;
+    min-height: 120px;
     font-size: 0.7rem;
+    position: relative;
+    z-index: 1;
 }
 
 aside ul {
@@ -65,17 +67,22 @@ aside ul {
 
 aside li {
     gap: 10px;
-    height: 100px;
+    height: 120px;
 }
 
 aside label {
     color: white;
-    line-height: 100px;
+    line-height: 120px;
 }
 
 aside img {
     width: 35px;
     height: 40px;
     margin-left: 10px;
+}
+
+
+aside li label:hover {
+    cursor: pointer;
 }
 </style>

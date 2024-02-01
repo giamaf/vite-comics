@@ -87,4 +87,8 @@ header img {
 header a {
     color: black;
 }
+
+header li a:hover {
+    color: blue;
+}
 </style>

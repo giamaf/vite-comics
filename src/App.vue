@@ -2,6 +2,7 @@
 import AppHeader from './components/AppHeader.vue';
 import AppMainContents from './components/AppMainContents.vue';
 import AppAsideContents from './components/AppAsideContents.vue';
+import AppFooterTop from './components/AppFooterTop.vue';
 export default {
   // Logica Javascript
   name: 'DC Comics',
@@ -10,7 +11,8 @@ export default {
   components: {
     AppHeader,
     AppMainContents,
-    AppAsideContents
+    AppAsideContents,
+    AppFooterTop,
   }
 
 };
@@ -22,6 +24,9 @@ export default {
   <AppHeader />
   <AppMainContents />
   <AppAsideContents />
+  <footer>
+    <AppFooterTop />
+  </footer>
 </template>
  
 
