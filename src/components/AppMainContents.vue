@@ -1,6 +1,7 @@
 <script>
 export default {
     name: 'AppMainContents',
+    data: () => ({}),
 
 };
 </script>
@@ -15,17 +16,16 @@ export default {
     </main>
 </template>
  
-<style>
+<style lang="scss" scoped>
 main {
     background-color: rgba(0, 0, 0, 0.9);
     min-height: 80px;
     font-family: 'Open Sans';
 
-}
-
-h4 {
-    color: white;
-    height: 100%;
-    line-height: 80px;
+    h4 {
+        color: white;
+        height: 100%;
+        line-height: 80px;
+    }
 }
 </style>

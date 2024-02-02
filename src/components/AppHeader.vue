@@ -1,62 +1,10 @@
 <script>
 export default {
     name: 'AppHeader',
-    data: () => ({
-        navItems: [
-            {
-                text: 'Characters',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Comics',
-                url: '#',
-                current: true,
-            },
-            {
-                text: 'Movies',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'TV',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Games',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Collectibles',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Videos',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Fans',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'News',
-                url: '#',
-                current: false,
-            },
-            {
-                text: 'Shop',
-                url: '#',
-                current: false,
-            },
-        ]
-    }),
-
-
+    data: () => ({}),
+    props: {
+        links: Array
+    }
 };
 </script>
  
@@ -64,31 +12,31 @@ export default {
     <header class="flex container">
         <a href="#"><img src="../assets/img/dc-logo.png" alt=""></a>
         <ul class="flex">
-            <li v-for="(item, i) in   navItems  " :key="i">
-                <a :href="item.url">{{ item.text }}</a>
+            <li v-for="(link, i) in   links  " :key="i">
+                <a :href="link.url">{{ link.text }}</a>
             </li>
         </ul>
     </header>
 </template>
  
-<style>
+<style lang="scss" scoped>
 header {
     justify-content: space-between;
     height: 80px;
     font-size: 0.7rem;
     font-weight: bold;
-}
 
-header img {
-    width: 50px;
-    height: 50px;
-}
+    img {
+        width: 50px;
+        height: 50px;
+    }
 
-header a {
-    color: black;
-}
+    a {
+        color: black;
 
-header li a:hover {
-    color: blue;
+        &:hover {
+            color: blue;
+        }
+    }
 }
 </style>

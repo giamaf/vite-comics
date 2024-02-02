@@ -1,32 +1,14 @@
 <script>
 export default {
     name: 'AppAsideContents',
-    data: () => ({
-        asideItems: [
-            {
-                image: 'buy-comics-digital-comics.png',
-                label: 'Digital Comics'
-            },
-            {
-                image: 'buy-comics-merchandise.png',
-                label: 'Dc Merchandise'
-            },
-            {
-                image: 'buy-comics-subscriptions.png',
-                label: 'Subscription'
-            },
-            {
-                image: 'buy-comics-shop-locator.png',
-                label: 'Comic Shop Locator'
-            },
-            {
-                image: 'buy-dc-power-visa.svg',
-                label: 'Dc Power Visa'
-            }
-        ]
-    }),
+    data: () => ({}),
+
+    props: {
+        items: Array
+    },
+
     methods: {
-        createPath(path) {
+        createPath() {
             const url = new URL(`../assets/img/`, import.meta.url)
 
             return url.href
@@ -40,7 +22,7 @@ export default {
     <aside>
         <div class="container">
             <ul class="flex">
-                <li v-for="(item, i) in asideItems" :key="i" class="flex">
+                <li v-for="(item, i) in items" :key="i" class="flex">
                     <a href="#"><img :src="`${createPath()}/${item.image}`" :alt="item.label"></a>
                     <label>{{ item.label }}</label>
                 </li>
@@ -49,40 +31,43 @@ export default {
     </aside>
 </template>
  
-<style>
+<style lang="scss" scoped>
 aside {
     background-color: rgb(12, 105, 247);
     /* min-height: 120px; */
     font-size: 0.7rem;
     position: relative;
     z-index: 1;
-}
 
-aside ul {
-    padding: 0 20px;
-    justify-content: space-between;
-}
+    ul {
+        padding: 0 20px;
+        justify-content: space-between;
+    }
 
-aside li {
-    gap: 10px;
-    height: 120px;
-}
+    li {
+        gap: 10px;
+        height: 120px;
+    }
 
-aside label {
-    color: white;
-    line-height: 120px;
-}
+    label {
+        color: white;
+        line-height: 120px;
 
-aside img {
-    width: 35px;
-    height: 40px;
-    margin-left: 10px;
-}
+        &:hover {
+            cursor: pointer;
+            filter: brightness(0);
+        }
+    }
 
+    img {
+        width: 35px;
+        height: 40px;
+        margin-left: 10px;
 
-aside li:hover img,
-aside li:hover label {
-    cursor: pointer;
-    filter: brightness(0);
+        &:hover {
+            cursor: pointer;
+            filter: brightness(0);
+        }
+    }
 }
 </style>

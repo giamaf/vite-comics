@@ -4,6 +4,8 @@ import AppMainContents from './components/AppMainContents.vue';
 import AppAsideContents from './components/AppAsideContents.vue';
 import AppFooterTop from './components/AppFooterTop.vue';
 import AppFooterBottom from './components/AppFooterBottom.vue';
+
+import { headerLinks, asideItems, footerTopList, footerBottomIcons } from './assets/data/index'
 export default {
   // Logica Javascript
   name: 'DC Comics',
@@ -14,7 +16,14 @@ export default {
     AppAsideContents,
     AppFooterTop,
     AppFooterBottom,
-  }
+  },
+
+  data: () => ({
+    headerLinks,
+    asideItems,
+    footerTopList,
+    footerBottomIcons
+  }),
 
 };
 
@@ -22,12 +31,12 @@ export default {
  
 <!-- Template -->
 <template>
-  <AppHeader />
+  <AppHeader :links="headerLinks" />
   <AppMainContents />
-  <AppAsideContents />
+  <AppAsideContents :items="asideItems" />
   <footer>
-    <AppFooterTop />
-    <AppFooterBottom />
+    <AppFooterTop :footerTopList="footerTopList" />
+    <AppFooterBottom :footerBottomIcons="footerBottomIcons" />
   </footer>
 </template>
  
