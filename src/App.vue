@@ -8,7 +8,6 @@ export default {
   // Logica Javascript
   name: 'DC Comics',
 
-
   components: {
     AppHeader,
     AppMainContents,
@@ -33,44 +32,7 @@ export default {
 </template>
  
 
-<style>
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Generics */
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
-img {
-  max-width: 100%;
-  display: inline-block;
-}
-
-ul {
-  list-style-type: none;
-  text-transform: uppercase;
-  gap: 20px;
-}
-
-a {
-  text-decoration: none;
-}
-
-
-/* Utils */
-.container {
-  margin: 0 auto;
-  max-width: 1200px;
-}
-
-.flex {
-  display: flex;
-  align-items: center;
-}
+<style lang="scss">
+@use './assets/scss/style.scss';
 </style>
 

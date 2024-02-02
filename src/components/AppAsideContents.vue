@@ -80,7 +80,9 @@ aside img {
 }
 
 
-aside li label:hover {
+aside li:hover img,
+aside li:hover label {
     cursor: pointer;
+    filter: brightness(0);
 }
 </style>

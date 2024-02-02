@@ -26,7 +26,9 @@ export default {
     <div class="footer-bottom">
         <div class="container flex">
             <div class="left">
-                <button role="button">SIGN-UP NOW!</button>
+                <button role="button">
+                    <h5>SIGN-UP NOW!</h5>
+                </button>
             </div>
             <div class="right">
                 <a href="#">
@@ -62,16 +64,12 @@ export default {
     padding: 10px;
 }
 
-.footer-bottom button:hover {
-    cursor: pointer;
-}
-
 .footer-bottom .right {
     display: flex;
     align-items: center;
 }
 
-.footer-bottom h5 {
+.footer-bottom .right h5 {
     color: rgb(12, 105, 247);
     margin: 0 20px
 }
@@ -80,5 +78,13 @@ export default {
     width: 25px;
     height: 25px;
 
+}
+
+.footer-bottom button:hover {
+    cursor: pointer;
+}
+
+.footer-bottom .social-link:hover {
+    filter: brightness(0);
 }
 </style>
