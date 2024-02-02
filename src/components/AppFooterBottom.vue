@@ -40,8 +40,9 @@ export default {
  
 <style lang="scss" scoped>
 .footer-bottom {
-    height: 90px;
+    // height: 70px;
     background-color: rgb(48, 48, 48);
+    position: sticky;
     filter: drop-shadow(2px 4px 6px black);
 
     button {

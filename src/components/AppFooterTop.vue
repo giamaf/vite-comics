@@ -32,8 +32,8 @@ export default {
     background-image: url(../assets/img/footer-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: calc(100vh - 370px);
     position: relative;
+    padding: 10px 0px 20px 0px;
 
     .row {
         display: flex;
@@ -56,7 +56,6 @@ export default {
     ul {
         text-transform: none;
         font-size: 0.6rem;
-        margin-top: 10px;
 
         li {
             margin: 5px 0;
@@ -65,8 +64,11 @@ export default {
     }
 
     img {
-        position: relative;
-        bottom: 80px;
+        position: absolute;
+        width: 20%;
+        right: 450px;
+        bottom: 0px;
+        top: -50px;
     }
 
     a {

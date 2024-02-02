@@ -4,14 +4,17 @@ import AppMainContents from './components/AppMainContents.vue';
 import AppAsideContents from './components/AppAsideContents.vue';
 import AppFooterTop from './components/AppFooterTop.vue';
 import AppFooterBottom from './components/AppFooterBottom.vue';
+import AppJumbo from './components/AppJumbo.vue';
 
-import { headerLinks, asideItems, footerTopList, footerBottomIcons } from './assets/data/index'
+import { headerLinks, mainCards, asideItems, footerTopList, footerBottomIcons } from './assets/data/index'
+
 export default {
   // Logica Javascript
   name: 'DC Comics',
 
   components: {
     AppHeader,
+    AppJumbo,
     AppMainContents,
     AppAsideContents,
     AppFooterTop,
@@ -20,6 +23,7 @@ export default {
 
   data: () => ({
     headerLinks,
+    mainCards,
     asideItems,
     footerTopList,
     footerBottomIcons
@@ -32,7 +36,9 @@ export default {
 <!-- Template -->
 <template>
   <AppHeader :links="headerLinks" />
-  <AppMainContents />
+  <AppJumbo />
+  <AppMainContents :mainCards="mainCards" />
+
   <AppAsideContents :items="asideItems" />
   <footer>
     <AppFooterTop :footerTopList="footerTopList" />

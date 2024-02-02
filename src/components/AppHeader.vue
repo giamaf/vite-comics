@@ -22,13 +22,14 @@ export default {
 <style lang="scss" scoped>
 header {
     justify-content: space-between;
-    height: 80px;
-    font-size: 0.7rem;
+    // padding: 10px 0;
+    height: 60px;
+    font-size: 0.5rem;
     font-weight: bold;
 
     img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
 
     a {

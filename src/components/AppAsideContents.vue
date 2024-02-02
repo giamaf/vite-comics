@@ -7,7 +7,7 @@ export default {
         items: Array
     },
 
-    methods: {
+    computed: {
         createPath() {
             const url = new URL(`../assets/img/`, import.meta.url)
 
@@ -23,7 +23,7 @@ export default {
         <div class="container">
             <ul class="flex">
                 <li v-for="(item, i) in items" :key="i" class="flex">
-                    <a href="#"><img :src="`${createPath()}/${item.image}`" :alt="item.label"></a>
+                    <a href="#"><img :src="`${createPath}/${item.image}`" :alt="item.label"></a>
                     <label>{{ item.label }}</label>
                 </li>
             </ul>
@@ -34,24 +34,22 @@ export default {
 <style lang="scss" scoped>
 aside {
     background-color: rgb(12, 105, 247);
-    /* min-height: 120px; */
-    font-size: 0.7rem;
+    font-size: 0.5rem;
     position: relative;
     z-index: 1;
+    padding: 20px 0;
 
     ul {
-        padding: 0 20px;
+        padding: 0px 20px;
         justify-content: space-between;
     }
 
     li {
         gap: 10px;
-        height: 120px;
     }
 
     label {
         color: white;
-        line-height: 120px;
 
         &:hover {
             cursor: pointer;
@@ -62,7 +60,6 @@ aside {
     img {
         width: 35px;
         height: 40px;
-        margin-left: 10px;
 
         &:hover {
             cursor: pointer;
