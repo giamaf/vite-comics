@@ -38,7 +38,6 @@ export default {
   <AppHeader :links="headerLinks" />
   <AppJumbo />
   <AppMainContents :mainCards="mainCards" />
-
   <AppAsideContents :items="asideItems" />
   <footer>
     <AppFooterTop :footerTopList="footerTopList" />

@@ -40,9 +40,7 @@ export default {
  
 <style lang="scss" scoped>
 .footer-bottom {
-    // height: 70px;
     background-color: rgb(48, 48, 48);
-    position: sticky;
     filter: drop-shadow(2px 4px 6px black);
 
     button {
@@ -53,6 +51,8 @@ export default {
 
         &:hover {
             cursor: pointer;
+            background-color: white;
+            color: rgb(12, 105, 247);
         }
     }
 
@@ -65,8 +65,8 @@ export default {
             margin: 0 20px
         }
 
-        li:hover {
-            filter: brightness(0);
+        li img:hover {
+            filter: invert(1);
         }
 
     }

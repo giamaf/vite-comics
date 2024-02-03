@@ -49,7 +49,6 @@ export default {
 
         h5 {
             color: white;
-            text-transform: uppercase;
         }
     }
 

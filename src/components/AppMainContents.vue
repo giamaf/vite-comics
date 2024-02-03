@@ -25,7 +25,7 @@ export default {
                 </div>
             </div>
             <button>
-                <h5>Load More</h5>
+                <h5>LOAD MORE</h5>
             </button>
         </section>
     </main>
@@ -54,11 +54,12 @@ main {
         color: white;
         border: 1px solid transparent;
         background-color: rgb(12, 105, 247);
-        // text-transform: uppercase;
         padding: 10px 35px;
 
         &:hover {
             cursor: pointer;
+            background-color: white;
+            color: rgb(12, 105, 247);
         }
     }
 }

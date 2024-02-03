@@ -27,19 +27,20 @@ export default {
 <style lang="scss" scoped>
 /* Style */
 .film-card {
+
     &:hover {
         cursor: pointer;
+        filter: brightness(0.5);
     }
 
     figcaption {
         color: white;
-        text-transform: uppercase;
         font-size: 0.7rem;
         padding: 5px 0;
     }
 }
 
-// img:first-of-type {
+// img{
 //     clip-path: inset(0px 32px 40px 32px);
 // }
 </style>
